@@ -1,0 +1,42 @@
+.quote-wrapper {
+  font-size: 25px;
+  padding: 1.5rem;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 30vh;
+  background-color: #d3d3d3;
+}
+
+.quote-button {
+  font-size: 20px;
+  padding: 5px 6px;
+  background-color: #fff;
+  width: 60%;
+  transition: all 0.4s ease-in-out;
+  border-radius: 10px;
+}
+
+.quote-button:hover {
+  background-color: black;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .quote-button {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .quote-button {
+    width: 20%;
+  }
+  .button-wrapper {
+    height: 20vh;
+  }
+}

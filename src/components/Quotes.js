@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "./Quotes.css";
 
 const Quotes = () => {
   const [quotesArray, fetchAllQuotes] = useState([]);
@@ -37,13 +38,25 @@ const Quotes = () => {
 
   return (
     <div>
-      {isPreviousActive ? (
-        <p>{quotesArray[previousQuotes]}</p>
-      ) : (
-        <p>{quotesArray[randomIndex]}</p>
-      )}
-      <button onClick={handleRandomQuote}>Other random quote</button>
-      <button onClick={handlePreviousQuote}>Previous quote </button>
+      <div className="quote-wrapper">
+        <p>
+          "{" "}
+          {isPreviousActive ? (
+            <span>{quotesArray[previousQuotes]}</span>
+          ) : (
+            <span>{quotesArray[randomIndex]}</span>
+          )}
+          "
+        </p>
+      </div>
+      <div className="button-wrapper">
+        <button className="quote-button" onClick={handleRandomQuote}>
+          Other random quote
+        </button>
+        <button className="quote-button" onClick={handlePreviousQuote}>
+          Previous quote{" "}
+        </button>
+      </div>
     </div>
   );
 };
